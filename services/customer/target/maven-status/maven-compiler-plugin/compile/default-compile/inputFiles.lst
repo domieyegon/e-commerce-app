@@ -1,0 +1,12 @@
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/CustomerApplication.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/Address.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/Customer.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerController.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerMapper.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerRepository.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerRequest.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerResponse.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/customer/CustomerService.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/exception/CustomerNotFoundException.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/handler/ErrorResponse.java
+/home/dominic/academy/domie/java/e-commerce-app/services/customer/src/main/java/ke/unify/ecommerce/handler/GlobalExceptionHandler.java
