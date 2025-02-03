@@ -7,6 +7,8 @@ import ke.unify.ecommerce.kafka.KafkaOrderProducer;
 import ke.unify.ecommerce.kafka.OrderConfirmation;
 import ke.unify.ecommerce.orderline.OrderLineRequest;
 import ke.unify.ecommerce.orderline.OrderLineService;
+import ke.unify.ecommerce.payment.PaymentClient;
+import ke.unify.ecommerce.payment.PaymentRequest;
 import ke.unify.ecommerce.product.ProductClient;
 import ke.unify.ecommerce.product.PurchaseRequest;
 import ke.unify.ecommerce.product.PurchaseResponse;
@@ -29,6 +31,7 @@ public class OrderService {
     private final ProductClient productClient;
 
     private final KafkaOrderProducer orderProducer;
+    private final PaymentClient paymentClient;
 
     public Long createOrder(OrderRequest request) {
 
@@ -53,7 +56,15 @@ public class OrderService {
             );
         }
 
-        //todo: Start payment process
+        // Start payment process
+        var paymentRequest = new PaymentRequest(
+                request.amount(),
+                request.paymentMethod(),
+                order.getId(),
+                order.getReference(),
+                customer
+        );
+        paymentClient.requestOrderPayment(paymentRequest);
 
         //Send order confirmation to notification ms (kafka)
         orderProducer.sendOrderConfirmation(
